@@ -7,4 +7,4 @@ This is self-contained code that will display a bitmap splash screen for a Windo
 * Windows SDK (preferably Windows XP PSDK or later)
 
 ## Building
-The code can be built on Visual C++ command line with `nmake`. For building as part of an application consult dependencies in the `Makefile`.
+The code can be built on Visual C++ command line with `nmake`. For building as part of an application consult dependencies in the `Makefile`. Both 32-bit and 64-bit builds are supported.
