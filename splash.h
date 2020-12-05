@@ -3,8 +3,8 @@
 // (c) 2020 Ai4rei/AN
 //
 // This work is licensed under a
-// Creative Commons Attribution 4.0 International License
-// https://creativecommons.org/licenses/by/4.0/
+// Creative Commons Attribution-ShareAlike 4.0 International
+// https://creativecommons.org/licenses/by-sa/4.0/
 // -------------------------------------------------------------- */
 
 #ifndef SPLASH_H
