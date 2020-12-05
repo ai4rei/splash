@@ -1,0 +1,69 @@
+/* -----------------------------------------------------------------
+// Splash Screen
+// (c) 2020 Ai4rei/AN
+//
+// This work is licensed under a
+// Creative Commons Attribution 4.0 International License
+// https://creativecommons.org/licenses/by/4.0/
+// -------------------------------------------------------------- */
+
+#include <windows.h>
+
+#include "splash.h"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+IDB_SPLASH BITMAP DISCARDABLE "splash.bmp"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_DLL
+FILESUBTYPE 0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "00000000"
+        BEGIN
+            VALUE "CompanyName",        "Ai4rei/AN"
+            VALUE "FileDescription",    "Sample Splash Screen"
+            VALUE "FileVersion",        "1.0.0.0"
+            VALUE "InternalName",       "splash"
+            VALUE "LegalCopyright",     "(C) 2020 Ai4rei/AN"
+            VALUE "OriginalFilename",   "SPLASH.DLL"
+            VALUE "ProductName",        "Splash Screen"
+            VALUE "ProductVersion",     "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0000 0x0000
+    END
+END
+
+2 24 DISCARDABLE
+BEGIN
+    "<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?>"
+    "<assembly xmlns=""urn:schemas-microsoft-com:asm.v1"" manifestVersion=""1.0"">"
+        "<assemblyIdentity"
+            " type=""win32"""
+            " name=""Ai4rei.E.SplashScreen"""
+            " version=""1.0.0.0"""
+        "/>"
+        "<dependency>"
+            "<dependentAssembly>"
+                "<assemblyIdentity type=""win32"" name=""Microsoft.Windows.Common-Controls"" version=""6.0.0.0"" processorArchitecture=""*"" publicKeyToken=""6595b64144ccf1df"" language=""*""/>"
+            "</dependentAssembly>"
+        "</dependency>"
+        "<compatibility xmlns=""urn:schemas-microsoft-com:compatibility.v1"">"
+            "<application>"
+                "<supportedOS Id=""{e2011457-1546-43c5-a5fe-008deee3d3f0}""/>"  // Windows Vista
+                "<supportedOS Id=""{35138b9a-5d96-4fbd-8e2d-a2440225f93a}""/>"  // Windows 7
+                "<supportedOS Id=""{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}""/>"  // Windows 8
+                "<supportedOS Id=""{1f676c76-80e1-4239-95bb-83d0f6d0da78}""/>"  // Windows 8.1
+                "<supportedOS Id=""{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}""/>"  // Windows 10
+            "</application>"
+        "</compatibility>"
+    "</assembly>"
+END
