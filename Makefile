@@ -1,6 +1,6 @@
 LINK = link
 
-CFLAGS = -nologo -W3 -GF -Gz -O1sig -LD -MD $(CFLAGS)
+CFLAGS = -nologo -W3 -GF -Gz -O1si -LD -MD $(CFLAGS)
 LFLAGS = -nologo -dll -opt:ref -opt:icf user32.lib gdi32.lib $(LFLAGS)
 !IF [$(RC) -nologo -? > NUL]==0
 RFLAGS = -nologo $(RFLAGS)
