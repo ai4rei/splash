@@ -345,7 +345,7 @@ static DWORD CALLBACK SplashScreenThreader(LPVOID lpParam)
 
             if(Msg.message==WM_QUIT)
             {/* re-post and exit */
-                PostQuitMessage(Msg.wParam);
+                PostQuitMessage((int)Msg.wParam);
             }
         }
     }
