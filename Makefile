@@ -8,6 +8,12 @@ RFLAGS = -nologo $(RFLAGS)
 
 all : splash.dll splash_unicode.dll
 
+clean :
+    if exist splash.dll del splash.dll
+    if exist splash_unicode.dll del splash_unicode.dll
+    if exist *.obj del *.obj
+    if exist *.res del *.res
+
 splash.dll : dllmain.obj splash.obj splash.res
     $(LINK) $(LFLAGS) -out:$@ $**
 
