@@ -1,6 +1,8 @@
 # Splash Screen
 ![SplashScreen](https://ai4rei.net/sites/nn/share/splash.jpg)
 
+[![Build Status](https://travis-ci.org/ai4rei/splash.svg?branch=master)](https://travis-ci.org/ai4rei/splash)
+
 This is self-contained code that will display a bitmap splash screen for a Windows GUI application until the main window appears. The code is provided as a DLL, but can also be used as part of an application under the license terms (attribution).
 
 ## System requirements
