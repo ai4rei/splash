@@ -141,7 +141,7 @@ static BOOL CALLBACK SplashScreenWndProcOnCreate(HWND hWnd, LPCREATESTRUCT lpCre
     if(lpSwd!=NULL)
     {
         /* Detect when windows from this process are showing up. We
-           intentionally do not listen for window creating, becase
+           intentionally do not listen for window creating, because
            the window may be created long before it is ready to be
            shown. */
         lpSwd->hWinEventHook = SetWinEventHook(EVENT_OBJECT_SHOW, EVENT_OBJECT_SHOW, NULL, &SplashScreenOnEventShow, GetCurrentProcessId(), 0, WINEVENT_OUTOFCONTEXT|WINEVENT_SKIPOWNTHREAD);
