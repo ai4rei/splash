@@ -120,6 +120,9 @@ static VOID CALLBACK SplashScreenOnEventShow(HWINEVENTHOOK hWinEventHook, DWORD 
 
         if(hWndSplash!=NULL)
         {
+            /* Maybe the splash screen did not show up, yet. */
+            KillTimer(hWndSplash, IDT_DELAYSHOW);
+
             /* Delay removal so that it does not look like the main
                window covers the splash screen. */
             SetTimer(hWndSplash, IDT_DELAYHIDE, 200, NULL);
@@ -251,12 +254,16 @@ static VOID CALLBACK SplashScreenWndProcOnTimer(HWND hWnd, UINT uId)
     switch(uId)
     {
     case IDT_DELAYSHOW:
+        KillTimer(hWnd, uId);
+
         if(!IsAnimateWindowBlendSupported() || !AnimateWindow(hWnd, 200, AW_BLEND))
         {
             ShowWindow(hWnd, SW_SHOWNORMAL);
         }
         break;
     case IDT_DELAYHIDE:
+        KillTimer(hWnd, uId);
+
         if(!IsAnimateWindowBlendSupported() || !AnimateWindow(hWnd, 200, AW_BLEND|AW_HIDE))
         {
             ShowWindow(hWnd, SW_HIDE);
