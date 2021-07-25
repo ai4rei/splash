@@ -249,7 +249,7 @@ static VOID CALLBACK SplashScreenWndProcOnPrintClient(HWND hWnd, HDC hDC, LPARAM
     SplashScreenPaint(hWnd, hDC);
 }
 
-static VOID CALLBACK SplashScreenWndProcOnTimer(HWND hWnd, UINT uId)
+static VOID CALLBACK SplashScreenWndProcOnTimer(HWND hWnd, UINT_PTR uId)
 {
     switch(uId)
     {
@@ -294,7 +294,7 @@ static BOOL SplashScreenRegister(HINSTANCE const hInstance)
 
     Wc.lpfnWndProc = &SplashScreenWndProc;
     Wc.hInstance = hInstance;
-    Wc.hCursor = LoadCursor(NULL, MAKEINTRESOURCE(IDC_APPSTARTING));
+    Wc.hCursor = LoadCursor(NULL, IDC_APPSTARTING);
     Wc.lpszClassName = WC_SPLASHSCREEN;
 
     /* load the process' main icon */
